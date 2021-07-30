@@ -23,8 +23,6 @@ function App() {
 export default App;
 
 const AppContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  place-items: center;
+  min-height: 100vh;
+  background-color: ${({ theme }) => theme.primary};
 `;

@@ -19,9 +19,12 @@ const Navbar = () => {
 export default Navbar;
 
 const NavContainer = styled.div`
+  background-color: ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.primary};
   width: 100%;
   height: 4rem;
   position: fixed;
+  top: 0;
   box-shadow: 0 1px 2px ${({ theme }) => theme.primary};
 `;
 const NavWrap = styled.nav`

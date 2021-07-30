@@ -11,12 +11,9 @@ const Hero = () => {
         <p>
           Dopasuj wymiary, materiał oraz kolor biurka tak aby nauka czy praca
           stała się bardziej komfortowa. <br /> Wycena odbywa się w czasie
-          rzeczywistym dzięki prostemu w obsłudze formularzowi.
+          rzeczywistym dzięki wygodnemu formularzowi.
         </p>
-
-        <RouterLink big primary>
-          Przejdź do formularza
-        </RouterLink>
+        <RouterLink big>Przejdź do formularza</RouterLink>
       </LeftCol>
       <RightCol>
         <img src={heroImg} alt="introduce product" />
@@ -31,6 +28,7 @@ const HeroContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
+  color: ${({ theme }) => theme.secondary};
   @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr;
   }
@@ -43,12 +41,14 @@ const LeftCol = styled.div`
   padding: 1rem;
   > h1 {
     max-width: 400px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
   }
   > p {
+    font-size: 1.2rem;
     max-width: 500px;
+    margin-bottom: 2rem;
   }
   @media screen and (max-width: 1200px) {
     align-items: center;

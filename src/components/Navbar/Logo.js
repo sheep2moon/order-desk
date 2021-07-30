@@ -18,4 +18,7 @@ const LogoContainer = styled.div`
   > img {
     width: 2rem;
   }
+  > h1 {
+    margin-left: 1rem;
+  }
 `;
