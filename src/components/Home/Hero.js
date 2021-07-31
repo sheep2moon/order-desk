@@ -13,7 +13,9 @@ const Hero = () => {
           stała się bardziej komfortowa. <br /> Wycena odbywa się w czasie
           rzeczywistym dzięki wygodnemu formularzowi.
         </p>
-        <RouterLink big>Przejdź do formularza</RouterLink>
+        <RouterLink big="true" to="/">
+          Przejdź do formularza
+        </RouterLink>
       </LeftCol>
       <RightCol>
         <img src={heroImg} alt="introduce product" />
@@ -57,8 +59,8 @@ const LeftCol = styled.div`
 
 const RightCol = styled.div`
   width: 100%;
+  padding: 1rem;
   > img {
-    padding: 1rem;
     max-width: 100%;
   }
 `;

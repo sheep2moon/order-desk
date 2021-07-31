@@ -14,13 +14,14 @@ export default Button;
 const StyledButton = styled.button`
   position: relative;
   border: ${({ primary, theme }) =>
-    primary ? "none" : `1px solid ${theme.primary}`};
+    primary ? `1px solid ${theme.secondary}` : "none"};
   background-color: ${({ primary, theme }) =>
     primary ? theme.primary : theme.secondary};
   padding: ${({ big }) => (big ? "1rem 1.5rem" : "0.5rem 1rem")};
   color: ${({ primary, theme }) => (primary ? theme.secondary : theme.primary)};
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
   :hover {
     transition: all 0.2s ease-in-out;
     opacity: 0.9;
@@ -42,6 +43,6 @@ const StyledButton = styled.button`
     bottom: 0;
     z-index: -1;
     background: ${({ primary, theme }) =>
-      primary ? theme.secondary : theme.primary};
+      primary ? theme.secondary : theme.detail};
   }
 `;

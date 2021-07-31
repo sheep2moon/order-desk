@@ -18,7 +18,7 @@ const Navbar = () => {
 
 export default Navbar;
 
-const NavContainer = styled.div`
+const NavContainer = styled.header`
   background-color: ${({ theme }) => theme.secondary};
   color: ${({ theme }) => theme.primary};
   width: 100%;

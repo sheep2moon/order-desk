@@ -12,8 +12,8 @@ const Home = () => {
 
 export default Home;
 
-const HomeContainer = styled.div`
+const HomeContainer = styled.main`
   max-width: 1400px;
-  margin: 4rem auto 1rem auto;
+  margin: 4rem auto 0 auto;
   display: flex;
 `;
