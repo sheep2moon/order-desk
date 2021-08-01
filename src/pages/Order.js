@@ -1,27 +1,62 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import RangeInput from "../components/Customize/RangeInput";
 import Button from "../components/Button";
 import SelectColor from "../components/Customize/SelectColor";
 
 const Customize = () => {
+  const [price, setPrice] = useState(200);
+  const [length, setLength] = useState(140);
+  const [width, setWidth] = useState(80);
+  const [thickness, setThickness] = useState(4);
+  const [color, setColor] = useState("#000");
+
+  useEffect(() => {
+    const p = (length * width * thickness) / 300;
+    setPrice(parseInt(p));
+  }, [length, width, thickness]);
+
   return (
     <CustomizeContainer>
       <h1>Stwórz własne biurko</h1>
       <FormContainer>
         <InputInfo>
           <label htmlFor="length">Dłguość</label>
-          <span>120cm</span>
+          <span>{length}cm</span>
         </InputInfo>
-        <RangeInput name="length" min="80" max="240" step="10" />
+        <RangeInput
+          onChange={(e) => setLength(e.target.value)}
+          name="length"
+          min="80"
+          max="240"
+          step="10"
+        />
         <InputInfo>
-          <label htmlFor="length">Szerokość</label>
-          <span>100cm</span>
+          <label htmlFor="width">Szerokość</label>
+          <span>{width}cm</span>
         </InputInfo>
-        <RangeInput name="length" min="50" max="160" step="5" />
-        <SelectColor />
+        <RangeInput
+          onChange={(e) => setWidth(e.target.value)}
+          name="width"
+          min="50"
+          max="160"
+          step="5"
+        />
+        <InputInfo>
+          <label htmlFor="thickness">Grubość</label>
+          <span>{thickness}cm</span>
+        </InputInfo>
+        <RangeInput
+          onChange={(e) => setThickness(e.target.value)}
+          name="thickness"
+          min="2"
+          max="10"
+          step="1"
+        />
+        <SelectColor setColor={setColor} color={color} />
+
         <Summary>
-          <p>Cena: 350zł</p>
+          <p>Cena: {price.toFixed(2)} zł</p>
           <Button type="submit">Zamów</Button>
         </Summary>
       </FormContainer>

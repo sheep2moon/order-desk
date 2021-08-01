@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SelectColor = () => {
+const SelectColor = ({ setColor, color }) => {
   const colors = [
     {
       name: "grafitowy",
@@ -20,8 +20,13 @@ const SelectColor = () => {
     <StyledSelect>
       <p>Kolor</p>
       <OptionsWrap>
-        {colors.map((color) => (
-          <Option key={color.value} color={color.value} />
+        {colors.map((el) => (
+          <Option
+            key={el.value}
+            color={el.value}
+            onClick={() => setColor(el.value)}
+            active={el.value === color ? 1 : 0}
+          />
         ))}
       </OptionsWrap>
     </StyledSelect>
@@ -42,8 +47,9 @@ const OptionsWrap = styled.div`
   column-gap: 0.25rem;
 `;
 const Option = styled.div`
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background: ${({ color }) => color};
-  border: 2px solid #fff;
+  border: ${({ active, theme }) =>
+    active ? `3px solid ${theme.detail}` : "2px solid #fff"};
 `;
