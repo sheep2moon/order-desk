@@ -79,10 +79,16 @@ const CustomizeContainer = styled.main`
   margin: 4rem auto 0 auto;
   display: flex;
   min-height: calc(100vh - 4rem);
+  max-width: 1400px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: ${({ theme }) => theme.secondary};
+  > h1 {
+    margin-top: 2rem;
+    padding: 0.25rem;
+    text-align: center;
+  }
 `;
 const Content = styled.div`
   width: 100%;
@@ -95,20 +101,26 @@ const Content = styled.div`
   }
 `;
 const InfoContainer = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   > img {
-    max-width: 500px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 700px;
+    @media screen and (max-width: 768px) {
+      padding: 0.5rem;
+    }
   }
 `;
 const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 700px;
   border: 1px solid #ffffff20;
+  margin: 1rem 1rem 2rem 1rem;
   padding: 1rem;
   background-color: ${({ theme }) => theme.primary};
 `;
@@ -124,4 +136,7 @@ const Summary = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  > p {
+    font-size: 1.4rem;
+  }
 `;

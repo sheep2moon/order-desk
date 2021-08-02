@@ -21,7 +21,7 @@ const Navbar = () => {
       <NavWrap>
         <Logo />
         {isSidebarOpen ? (
-          <Sidebar />
+          <Sidebar setIsSidebarOpen={setIsSidebarOpen} />
         ) : (
           <NavLinks activeLink={activeLink} setActiveLink={setActiveLink} />
         )}

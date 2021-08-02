@@ -13,7 +13,7 @@ const Hero = () => {
           stała się bardziej komfortowa. <br /> Wycena odbywa się w czasie
           rzeczywistym dzięki wygodnemu formularzowi.
         </p>
-        <RouterLink big="true" to="/">
+        <RouterLink big="true" to="/zamow">
           Przejdź do formularza
         </RouterLink>
       </LeftCol>
@@ -40,16 +40,14 @@ const LeftCol = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 1rem;
+  padding: 3rem;
   > h1 {
-    max-width: 400px;
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
   }
   > p {
     font-size: 1.2rem;
-    max-width: 500px;
     margin-bottom: 2rem;
   }
   @media screen and (max-width: 1200px) {

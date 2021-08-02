@@ -2,13 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import RouterLink from "../RouterLink";
 
-const Sidebar = () => {
+const Sidebar = ({ setIsSidebarOpen }) => {
   return (
     <SidebarContainer>
       <LinksWrap>
-        <RouterLink big>Strona Główna</RouterLink>
-        <RouterLink big>Zamów</RouterLink>
-        <RouterLink big>Kontakt</RouterLink>
+        <RouterLink big="true" to="/" onClick={() => setIsSidebarOpen(false)}>
+          Strona Główna
+        </RouterLink>
+        <RouterLink
+          big="true"
+          to="/zamow"
+          onClick={() => setIsSidebarOpen(false)}
+        >
+          Zamów
+        </RouterLink>
+        <RouterLink
+          big="true"
+          to="/kontakt"
+          onClick={() => setIsSidebarOpen(false)}
+        >
+          Kontakt
+        </RouterLink>
       </LinksWrap>
     </SidebarContainer>
   );

@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavLinks = ({ activeLink, setActiveLink }) => {
-  const location = useLocation();
-
   const links = [
     {
       to: "/",
