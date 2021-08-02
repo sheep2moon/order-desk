@@ -20,6 +20,7 @@ const StyledLink = styled(Link)`
   background: ${({ primary, theme }) =>
     primary ? theme.primary : theme.secondary};
   color: ${({ primary, theme }) => (primary ? theme.secondary : theme.primary)};
+  text-align: center;
   transition: all 0.2s ease-in-out;
   :hover {
     transition: all 0.2s ease-in-out;

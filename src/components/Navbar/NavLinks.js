@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-const NavLinks = () => {
+const NavLinks = ({ activeLink, setActiveLink }) => {
   const location = useLocation();
-  const [activeLink, setActiveLink] = useState(location.pathname);
+
   const links = [
     {
       to: "/",
@@ -42,6 +42,10 @@ export default NavLinks;
 const NavLinksList = styled.ul`
   list-style: none;
   display: flex;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const NavLinkWrap = styled.li`
   padding: 0.25rem;

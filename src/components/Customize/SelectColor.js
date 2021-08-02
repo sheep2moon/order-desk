@@ -47,6 +47,7 @@ const OptionsWrap = styled.div`
   column-gap: 0.25rem;
 `;
 const Option = styled.div`
+  cursor: pointer;
   width: 3rem;
   height: 3rem;
   background: ${({ color }) => color};

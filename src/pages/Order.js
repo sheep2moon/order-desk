@@ -3,11 +3,11 @@ import styled from "styled-components";
 import RangeInput from "../components/Customize/RangeInput";
 import Button from "../components/Button";
 import SelectColor from "../components/Customize/SelectColor";
-import infoImg from "../assets/dimensions.svg";
+import infoImg from "../assets/sizeInfo.svg";
 
 const Customize = () => {
-  const [price, setPrice] = useState(200);
-  const [length, setLength] = useState(140);
+  const [price, setPrice] = useState(0);
+  const [length, setLength] = useState(180);
   const [width, setWidth] = useState(80);
   const [thickness, setThickness] = useState(4);
   const [color, setColor] = useState("#000");
@@ -35,6 +35,7 @@ const Customize = () => {
             min="80"
             max="240"
             step="10"
+            value={length}
           />
           <InputInfo>
             <label htmlFor="width">Szerokość</label>
@@ -46,6 +47,7 @@ const Customize = () => {
             min="50"
             max="160"
             step="5"
+            value={width}
           />
           <InputInfo>
             <label htmlFor="thickness">Grubość</label>
@@ -57,6 +59,7 @@ const Customize = () => {
             min="2"
             max="10"
             step="1"
+            value={thickness}
           />
           <SelectColor setColor={setColor} color={color} />
 
@@ -75,8 +78,10 @@ export default Customize;
 const CustomizeContainer = styled.main`
   margin: 4rem auto 0 auto;
   display: flex;
+  min-height: calc(100vh - 4rem);
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: ${({ theme }) => theme.secondary};
 `;
 const Content = styled.div`
