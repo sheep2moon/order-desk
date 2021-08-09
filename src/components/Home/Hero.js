@@ -29,7 +29,9 @@ export default Hero;
 const HeroContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 4em);
   padding: 1rem;
+  background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.secondary};
   @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr;
@@ -40,15 +42,15 @@ const LeftCol = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 3rem;
+  padding: 3em;
   > h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     font-weight: 700;
     text-transform: uppercase;
   }
   > p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.2em;
+    margin-bottom: 2em;
   }
   @media screen and (max-width: 1200px) {
     align-items: center;
@@ -57,7 +59,7 @@ const LeftCol = styled.div`
 
 const RightCol = styled.div`
   width: 100%;
-  padding: 1rem;
+  padding: 1em;
   > img {
     max-width: 100%;
   }

@@ -17,6 +17,10 @@ const Customize = () => {
     setPrice(parseInt(p));
   }, [length, width, thickness]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <CustomizeContainer>
       <h1>Stwórz własne biurko</h1>
@@ -24,7 +28,7 @@ const Customize = () => {
         <InfoContainer>
           <img src={infoImg} alt="" />
         </InfoContainer>
-        <FormContainer>
+        <FormContainer onSubmit={(e) => handleSubmit(e)}>
           <InputInfo>
             <label htmlFor="length">Długość</label>
             <span>{length}cm</span>
@@ -85,7 +89,8 @@ const CustomizeContainer = styled.main`
   justify-content: center;
   color: ${({ theme }) => theme.secondary};
   > h1 {
-    margin-top: 2rem;
+    font-size: 3em;
+    margin-bottom: 2em;
     padding: 0.25rem;
     text-align: center;
   }
@@ -119,7 +124,7 @@ const FormContainer = styled.form`
   align-items: center;
   width: 100%;
   max-width: 700px;
-  border: 1px solid #ffffff20;
+  box-shadow: 0 0 5px 5px #00000040;
   margin: 1rem 1rem 2rem 1rem;
   padding: 1rem;
   background-color: ${({ theme }) => theme.primary};

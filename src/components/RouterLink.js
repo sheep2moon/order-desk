@@ -13,6 +13,7 @@ const RouterLink = ({ primary, big, children, ...rest }) => {
 export default RouterLink;
 
 const StyledLink = styled(Link)`
+  display: inline-block;
   padding: ${({ big }) => (big ? "1rem 2rem" : ".5rem 1rem")};
   border: ${({ primary, theme }) =>
     primary ? "none" : `1px solid ${theme.primary}`};
