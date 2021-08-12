@@ -25,6 +25,7 @@ export default Contact;
 const ContactContainer = styled.div`
   margin-top: 4rem;
   color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primary};
   display: flex;
   flex-direction: column;
   align-items: center;

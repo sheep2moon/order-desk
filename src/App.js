@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from "styled-components";
-import "./App.css";
+
 import { theme } from "./commons/Theme";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -28,5 +28,4 @@ export default App;
 
 const AppContainer = styled.div`
   min-height: calc(100vh - 4rem);
-  background-color: ${({ theme }) => theme.primary};
 `;

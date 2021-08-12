@@ -88,6 +88,7 @@ const CustomizeContainer = styled.main`
   align-items: center;
   justify-content: center;
   color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primary};
   > h1 {
     font-size: 3em;
     margin-bottom: 2em;

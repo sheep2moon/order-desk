@@ -25,7 +25,9 @@ export default Section;
 
 const SectionContainer = styled.section`
   margin: 0 auto;
+  padding: 2rem 1rem;
   color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primary};
 `;
 const ColsWrap = styled.div`
   height: 100%;

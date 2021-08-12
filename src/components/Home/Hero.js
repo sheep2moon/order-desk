@@ -29,8 +29,7 @@ export default Hero;
 const HeroContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - 4em);
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.secondary};
   @media screen and (max-width: 1200px) {

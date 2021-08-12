@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CardsSection from "../components/Home/CardsSection";
 import Hero from "../components/Home/Hero";
 import Section from "../components/Home/Section";
 import { sectionsData } from "../components/Home/sectionsData";
@@ -8,9 +9,8 @@ const Home = () => {
   return (
     <HomeContainer>
       <Hero />
-      {sectionsData.map((sectionData) => (
-        <Section data={sectionData} />
-      ))}
+      <CardsSection />
+      <Section data={sectionsData[0]} />
     </HomeContainer>
   );
 };
